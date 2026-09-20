@@ -8,6 +8,7 @@ const Experience: React.FC = () => {
       company: 'PT Sinar Sukses Persada — Galesong Group',
       location: 'Makassar, Indonesia',
       period: 'Feb 2026 – Apr 2026',
+      logo: '/projects/logos/galesong-logo.png',
       description: 'Contributed to the development and improvement of a web-based shrimp harvest monitoring dashboard for aquaculture operations.',
       responsibilities: [
         'Developed features for a shrimp harvest monitoring dashboard',
@@ -25,6 +26,7 @@ const Experience: React.FC = () => {
       company: 'Smart Solar Irrigation Decision Support System',
       location: 'Universitas Bosowa',
       period: '2025 – 2026',
+      logo: '/projects/logos/universitas-bosowa-logo.png',
       description: 'Developed a web-based decision support system for smart irrigation scheduling using the Simple Additive Weighting (SAW) method.',
       responsibilities: [
         'Designed the web interface for the decision support system',
@@ -51,10 +53,23 @@ const Experience: React.FC = () => {
               <div className="relative">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 gap-3 sm:gap-4">
                   <div className="flex-1 min-w-0">
-                    <div className="flex flex-wrap items-center gap-2 mb-2">
-                      <span className="inline-block px-2.5 sm:px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-medium border border-cyan-500/20">
-                        {exp.role}
-                      </span>
+                    {/* Logo and Role Badge */}
+                    <div className="flex items-center gap-3 sm:gap-4 mb-3">
+                      {/* Logo Container */}
+                      <div className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 lg:w-[72px] lg:h-[72px] bg-slate-800/30 backdrop-blur-sm rounded-xl p-2 sm:p-2.5 flex items-center justify-center border border-slate-700/30">
+                        <img 
+                          src={exp.logo} 
+                          alt={`${exp.company} logo`}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      
+                      {/* Role Badge */}
+                      <div className="flex-1 min-w-0">
+                        <span className="inline-block px-2.5 sm:px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-medium border border-cyan-500/20">
+                          {exp.role}
+                        </span>
+                      </div>
                     </div>
                     
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-100 group-hover:text-cyan-400 transition-colors duration-300">
