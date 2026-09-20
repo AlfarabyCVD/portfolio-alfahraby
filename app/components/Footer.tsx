@@ -9,7 +9,13 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Portfolio</h3>
+            <div className="mb-4">
+              <img 
+                src="/projects/logos/ar-logo.png" 
+                alt="AR" 
+                className="h-10 w-auto object-contain"
+              />
+            </div>
             <p className="text-gray-400 text-sm">
               A showcase of my work, skills, and experience.
             </p>
@@ -53,7 +59,7 @@ const Footer: React.FC = () => {
         {/* Divider */}
         <div className="border-t border-gray-800 pt-8">
           <p className="text-center text-gray-400 text-sm">
-            © {currentYear} Portfolio. All rights reserved.
+            © {currentYear} Muhammad Alfahraby. All rights reserved.
           </p>
         </div>
       </div>
